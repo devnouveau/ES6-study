@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /*
+        const :
+        재선언 X, 재할당 X (오브젝트/배열 내 값 변경은 가능)
+
+        const를 기본으로 사용
+        변경될 변수는 let 사용
+        var는 지양
+        */
+        document.addEventListener("DOMContentLoaded", function(){
+            function home() {
+                const list = ["apple", "orange", "watermelon"];
+                list.push("banana"); //const array 값 변경 가능
+                console.log(list); 
+            }
+            home();
+
+            // const변수로 immutable array 조작
+            const list = ["apple", "orange", "watermelon"];
+            list2 = [].concat(list, "banana"); // list 복사 + 값 변경
+            console.log(list === list2) // false
+
+        })
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", function(){
+            function getObj() {
+                const name = "crong";
+
+                const getName = function() {
+                    return name;
+                }
+
+                const setName = function(newName) {
+                    name = newName;
+                }
+
+                const printName = function() {
+                    console.log(name);
+                }
+
+                /*
+                return {
+                    getName : getName,
+                    setName : setName
+                }
+                */
+                // 위를 아래와 같은 오브젝트 리터럴로 표현가능 (key value값이 동일하면 key생략)
+                return { getName, setName }
+                return { getName, setName, name}
+            }
+
+            var obj = getObj();
+            console.log(obj);
+
+        })
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

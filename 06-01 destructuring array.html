@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            let data = ["a", "b", "c", "d", "e", "f"];
+            /*
+            let A = data[0];
+            let D = data[3];
+            */
+            // destruncturing을 이용하여 '배열 요소'를 여러 변수에 한 번에 할당 가능
+            let [A,,,D] = data; // let [가져오고 싶은 배열요소위치에 변수명 입력,,,,뒤쪽 콤마는 생략] = 배열명
+            console.log(A,D); // a d
+        })
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

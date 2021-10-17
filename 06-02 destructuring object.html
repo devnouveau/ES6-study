@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", function(){
+            let obj = {
+                name : "crong",
+                address : "Korea",
+                age : 10
+            }
+
+            // destruncturing을 이용하여 'object의 값'을 여러 변수에 한 번에 할당 1. key와 동일한 변수명
+            let {name, age} = obj;
+            console.log(name, age); // "crong" 10 출력
+
+            // destruncturing을 이용하여 'object의 값'을 여러 변수에 한 번에 할당 2. 변수명을 임의로 지정
+            let {name:myName, age:myAge} = obj;
+            console.log(myName, myAge); // "crong" 10 출력
+        })
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

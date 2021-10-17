@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", function(){
+            let str = "hello world";
+            let matchstr1 = "hello";
+            let matchstr2 = "ld";
+            let matchstr3 = "wo";
+
+            //ES2015 string의 새로운 메서드들
+            console.log(str.startsWith(matchstr1));
+            console.log(str.endsWith(matchstr2));
+            console.log(str.includes(matchstr3));
+        })
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

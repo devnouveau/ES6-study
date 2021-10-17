@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", function(){
+            var data = [1,2,undefined,NaN,null,""];
+            Array.prototype.getIndex = function(){}; // 메소드 추가
+
+            // 값 순회 forEach
+            data.forEach(function(value) {
+                console.log("forEach", value);
+            })
+
+            // object(array포함)의 인덱스 순회시 사용되는 for in
+            // 상위요소까지 순회하는 문제 (function(){} 까지 출력함)
+            for(let idx in data) { 
+                console.log("for in" , data[idx]);
+            }
+            
+            // 값 순회시 사용되는 for of
+            for(let value of data) { 
+                console.log("for of" , value);
+            }
+            
+            // for of로 문자열 순회
+            var str = "hello world!!!"
+            for(let value of str) { 
+                console.log("for of string" , value);
+            }
+        })
+    </script>
+</head>
+<body>
+    
+</body>
+</html> 

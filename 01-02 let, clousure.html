@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li>javascript</li>
+        <li>java</li>   
+        <li>python</li>
+        <li>django</li>
+    </ul>    
+</body>
+<script>
+    /*
+    let :    
+    블럭 단위에서 유효한 변수
+    재선언 X, 재할당 O
+    */
+
+    var list = document.querySelectorAll("li");
+    for(var i=0; i<list.length; i++){ // var 사용
+        list[i].addEventListener("click", function(){ 
+            console.log(i+"번째 리스트입니다.(var)") 
+            // i는 클로저변수. 
+            // i는 블록 밖에 있는 값을 참조하며, 계속 같은 숫자 4를 공유함
+        });
+    }
+    for(let i=0; i<list.length; i++){ // let사용하여 변수값을 블록 스코프 내 저장
+        list[i].addEventListener("click", function(){ 
+            console.log(i+"번째 리스트입니다.(let)") 
+        });
+    }
+</script>
+</html>
